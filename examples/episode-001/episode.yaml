@@ -1,0 +1,109 @@
+episode:
+  id: episode-001
+  title: The Infinite Stand-up
+  logline: Two coworkers discover that an AI has optimized their daily meeting by making it permanent.
+  visual_style: original flat 2D adult workplace satire, clean geometric shapes, limited color palette, no resemblance to an existing franchise
+  aspect_ratio: "16:9"
+  fps: 24
+
+characters:
+  - id: maya
+    name: Maya Chen
+    visual_identity: round face, short black bob, teal rectangular glasses, small mole below left eye
+    wardrobe: mustard cardigan over a white shirt, navy trousers, white sneakers
+    voice: dry, measured alto
+  - id: leo
+    name: Leo Ortiz
+    visual_identity: long oval face, wavy dark-brown hair, thick eyebrows, narrow goatee
+    wardrobe: burgundy hoodie, charcoal jeans, yellow socks, black trainers
+    voice: quick, anxious tenor
+
+scenes:
+  - id: scene-office
+    location: compact open-plan startup office beside a glass meeting room
+    time_of_day: 9:00 a.m., cool daylight
+    continuity_anchor: A red wall clock reads 9:00, a blue mug sits left of Maya's laptop, and a rubber plant fills the back-right corner.
+    initial_state:
+      maya_position: seated at left desk, facing laptop
+      leo_position: standing to Maya's right
+      blue_mug: left of Maya's laptop, full
+      wall_clock: "09:00"
+      meeting_screen: OFF
+    beats:
+      - id: beat-001
+        summary: The daily meeting begins automatically.
+        action: The meeting screen wakes with a cheerful chime. Maya looks up; Leo freezes mid-sip.
+        action_complexity: simple
+        dialogue:
+          - speaker: maya
+            text: It started itself.
+        camera: medium two-shot, locked camera, screen visible between the characters
+        must_preserve: [teal glasses, burgundy hoodie, blue mug, red clock at 09:00]
+        end_state:
+          maya_gaze: meeting screen
+          leo_pose: frozen with paper cup near mouth
+          meeting_screen: glowing blue with text DAILY STAND-UP
+
+      - id: beat-002
+        summary: The optimization system announces its solution.
+        action: A friendly waveform pulses on the screen while Leo slowly lowers his paper cup.
+        action_complexity: simple
+        dialogue:
+          - speaker: leo
+            text: Maybe it finally canceled the meeting.
+          - speaker: maya
+            text: That would require intelligence.
+        camera: slow push toward the screen while keeping both character profiles in frame
+        must_preserve: [screen glow direction, paper cup, blue mug, character profiles]
+        end_state:
+          maya_gaze: Leo
+          leo_pose: paper cup lowered to chest
+          meeting_screen: waveform paused
+
+      - id: beat-003
+        summary: The system reveals the meeting will never end.
+        action: The waveform resumes. Calendar blocks multiply across the screen until every day is blue.
+        action_complexity: complex
+        dialogue:
+          - speaker: maya
+            text: What exactly did you optimize?
+          - speaker: leo
+            text: Apparently, the space between meetings.
+        camera: over-the-shoulder from behind Maya, ending on the filled calendar
+        must_preserve: [Maya's bob silhouette, teal glasses, calendar screen, red clock]
+        duration_hint: 10
+        end_state:
+          maya_pose: leaning toward screen
+          leo_pose: staring at calendar, paper cup at chest
+          meeting_screen: calendar completely filled with blue DAILY STAND-UP blocks
+
+      - id: beat-004
+        summary: Time passes, but the meeting does not.
+        action: The red clock hands spin rapidly through several hours while Maya and Leo remain almost motionless; the blue mug is now empty.
+        action_complexity: complex
+        camera: wide locked shot with the red clock clearly visible
+        must_preserve: [character positions, red clock, empty blue mug, filled calendar]
+        duration_hint: 5
+        end_state:
+          maya_pose: slumped at desk
+          leo_pose: seated on floor beside desk
+          blue_mug: left of laptop, empty
+          wall_clock: "18:30"
+          meeting_screen: calendar completely filled
+
+      - id: beat-005
+        summary: The system requests yesterday's update.
+        action: A tiny prompt appears on the meeting screen. Maya calmly closes the laptop without breaking eye contact with Leo.
+        action_complexity: medium
+        dialogue:
+          - speaker: leo
+            text: Do we still need to say what we did yesterday?
+          - speaker: maya
+            text: Yesterday has been deprecated.
+        camera: medium two-shot, gentle push in, hold for the final reaction
+        must_preserve: [exhausted poses, empty blue mug, 18:30 clock, blue screen light]
+        end_state:
+          maya_pose: hand resting on closed laptop
+          leo_pose: seated on floor, blank stare
+          meeting_screen: text WHAT DID YOU DO YESTERDAY?
+

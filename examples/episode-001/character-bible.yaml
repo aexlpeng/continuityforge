@@ -1,0 +1,32 @@
+project: ContinuityForge example episode 001
+asset_policy: All characters, dialogue, locations, and designs are original fictional material.
+characters:
+  maya:
+    identity_lock:
+      - short black bob ending at jawline
+      - teal rectangular glasses
+      - small mole below left eye
+      - mustard cardigan and navy trousers
+    expression_range: [dry amusement, skepticism, exhausted resignation]
+    never:
+      - change glasses shape or color
+      - add jewelry
+      - imitate a recognizable performer or existing animated character
+  leo:
+    identity_lock:
+      - wavy dark-brown hair
+      - thick eyebrows and narrow goatee
+      - burgundy hoodie and charcoal jeans
+      - yellow socks
+    expression_range: [nervous optimism, dawning panic, blank exhaustion]
+    never:
+      - remove goatee
+      - change hoodie color
+      - imitate a recognizable performer or existing animated character
+location:
+  identity_lock:
+    - red wall clock above glass meeting room
+    - blue mug to the left of Maya's laptop
+    - rubber plant in the back-right corner
+    - cool daylight from frame left
+
